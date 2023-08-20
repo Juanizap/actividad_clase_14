@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario alta</title>
+    <style>
+        form {
+            margin-top: 5%;
+        }
+
+        input,
+        label {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 0.5%;
+
+        }
+
+        label {
+            padding-bottom: 1%;
+        }
+
+        .boton {
+            margin-top: 1%;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="name">Nombre:</label>
+        <input type="text" class="nombre">
+        <label for="sname">Apellido</label>
+        <input type="text" class="apellido">
+        <label for="pass">Password</label>
+        <input type="password" class="pass" required>
+        <input type="button" class="boton" onclick="clickEnviar()" value="Enviar">
+
+
+    </form>
+
+    <p> // datos correctos <br>
+
+        <b> Usuario:</b> admin<br>
+        <b>Apellido:</b> administrador<br>
+        <b>password:</b> 1234<br>
+    </p>
+
+    <script>
+
+        const nombre = document.querySelector(".nombre");
+        const apellido = document.querySelector(".apellido");
+        const password = document.querySelector(".pass");
+
+        const enviar = document.querySelector(".boton");
+
+        function clickEnviar() {
+
+
+            if (nombre.value == "" || apellido.value == "" || password.value == "") {
+                alert("se olvido de rellenar al menos un campo!");
+            }
+
+
+            else {
+
+                if (nombre.value === "admin") {
+
+                    alert("nombre ingresado con exito");
+               
+
+                } else {
+
+                    alert("escriba el nombre correcto");
+
+
+                }
+
+                if (apellido.value === "administrador") {
+
+                    alert("apellido ingresado con exito");
+                  
+
+                } else {
+
+                    alert("escriba el apellido correcto");
+
+
+                }
+                if (password.value === "1234") {
+
+                    alert("contraseña ingresada con exito");
+                 
+
+                } else {
+
+                    alert("escriba la contraseña correcta");
+
+
+                }
+
+
+            }
+
+            if (nombre.value === "admin" && apellido.value === "administrador" && password.value === "1234"){
+                alert("ingreso con EXITO");
+
+            }
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
